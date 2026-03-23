@@ -1,0 +1,51 @@
+
+GET http://localhost:4000/user-api/users
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudXJhZ0AiLCJpYXQiOjE3NzI4NzcyMjAsImV4cCI6MTc3Mjg4MDgyMH0.qRnniKrLhElY_PI3WbsMPgqXYi7OrxmFfebc6StWqwU; Path=/; HttpOnly; SameSite=Lax
+### Read a user by id
+GET http://localhost:4000/user-api/users/69aa98949d5fc5fc95a49dc2
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudXJhZ0AiLCJpYXQiOjE3NzI4NzcyMjAsImV4cCI6MTc3Mjg4MDgyMH0.qRnniKrLhElY_PI3WbsMPgqXYi7OrxmFfebc6StWqwU; Path=/; HttpOnly; SameSite=Lax
+
+
+### create new user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"anush",
+    "password":"anush",
+    "email":"anurag@",
+    "age":19
+}
+###
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "email":"anurag@",
+    "password":"anush"
+}
+
+
+
+### update user
+PUT http://localhost:4000/user-api/users/69aa98949d5fc5fc95a49dc2
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudXJhZ0AiLCJpYXQiOjE3NzI4NzcyMjAsImV4cCI6MTc3Mjg4MDgyMH0.qRnniKrLhElY_PI3WbsMPgqXYi7OrxmFfebc6StWqwU; Path=/; HttpOnly; SameSite=Lax
+
+
+{
+    "username":"anush",
+    "password":"anushkasharma",
+    "email":"anurag@",
+    "age":19
+}
+
+
+
+
+###
+DELETE http://localhost:4000/user-api/users/69aa98949d5fc5fc95a49dc2
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudXJhZ0AiLCJpYXQiOjE3NzI4NzcyMjAsImV4cCI6MTc3Mjg4MDgyMH0.qRnniKrLhElY_PI3WbsMPgqXYi7OrxmFfebc6StWqwU; Path=/; HttpOnly; SameSite=Lax
+
+//product http server
+

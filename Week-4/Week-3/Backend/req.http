@@ -1,0 +1,70 @@
+
+### read the all users
+
+GET http://localhost:3000/user-api/users
+
+### Read a user by id
+GET http://localhost:3000/user-api/users/1
+
+### create new user
+POST http://localhost:3000/user-api/users
+Content-Type: application/json
+
+
+{
+    "Productid":1,
+    "name":"laptop",
+    "brand":"hp",
+    "price":50000
+}
+
+
+
+### update user
+PUT http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+    "Productid":1,
+    "name":"laptop",
+    "brand":"acer",
+    "price":30000
+}
+
+###
+DELETE http://localhost:3000/user-api/users/1
+### read the all users
+
+GET http://localhost:3000/product-api/users
+
+### Read a user by id
+GET http://localhost:3000/product-api/users/hp
+
+### create new user
+POST http://localhost:3000/product-api/users
+Content-Type: application/json
+
+
+{
+    "Productid":1,
+    "name":"laptop",
+    "brand":"hp",
+    "price":50000
+}
+
+
+
+### update user
+PUT http://localhost:3000/product-api/users
+Content-Type: application/json
+
+{
+    "Productid":1,
+    "name":"laptop",
+    "brand":"acer",
+    "price":30000
+}
+
+###
+DELETE http://localhost:3000/product-api/users/1
+
