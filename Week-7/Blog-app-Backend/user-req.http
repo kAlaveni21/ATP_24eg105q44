@@ -1,0 +1,48 @@
+###register user
+POST http://localhost:4000/auth/users
+Content-Type: application/json
+
+{
+    "firstName":"mounika",
+    "lastName":"",
+    "email":"monikareddy@gmail.com",
+    "password":"mounika",
+    "role":"USER",
+    "profileImageUrl":"https://examples.com/pic/cokm"
+}
+
+### user login
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "email":"monikareddy@gmail.com",
+    "password":"mounika"
+}
+
+###user logout
+GET http://localhost:4000/auth/logout
+
+###read articles of all authors
+GET http://localhost:4000/user-api/articles
+
+###add comments by user to an article
+PUT  http://localhost:4000/user-api/articles
+Content-Type: application/json
+
+{
+    "articleId":"69b4e611cec8d4dde881aaa6",
+    "comment":"this aricle is so good to read"
+}
+
+
+###change password
+PUT  http://localhost:4000/auth/password
+Content-Type: application/json
+
+{
+    "currentPassword":"mounika",
+    "newPassword":"reddy"
+
+}
+
