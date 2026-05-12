@@ -37,7 +37,7 @@ userApp.put("/articles", verifyToken("USER"), async (req, res) => {
 
     const userId = req.user?.id;
 
-    // ✅ FIXED FIELD NAME
+    //  FIXED FIELD NAME
     articleDocument.comments.push({
       user: userId,
       comment: comment,
@@ -46,7 +46,7 @@ userApp.put("/articles", verifyToken("USER"), async (req, res) => {
     await articleDocument.save();
 
     res.status(200).json({
-      message: "Comment added successfully", // ✅ lowercase
+      message: "Comment added successfully", 
       payload: articleDocument,
     });
   } catch (err) {
